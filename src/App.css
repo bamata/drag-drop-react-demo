@@ -1,27 +1,33 @@
-.App {
+ .App {
   text-align: center;
-}
+ 
+} 
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+@media (max-width: 537px) {
+  .container {
+    flex-direction: column;
+
+  }
+}
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  /*flex-direction: column;
+  align-items: center; */
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+ 
 }
 
 .App-link {
@@ -35,4 +41,58 @@
   to {
     transform: rotate(360deg);
   }
+}
+.main-container {
+  padding: 0 30px;
+ 
+  height: fit-content;
+}
+.main-container .App-header h1 {
+  white-space: nowrap;
+}
+.container {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.container-drag, .droppable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid gray;
+  margin: 10px;
+  padding: 10px 0;
+  height: fit-content;
+}
+
+.tasks-container, .complete-tasks-container {
+  padding: 15px 10px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container .title {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.draggable {
+  margin: 5px;
+  height: 90px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.draggable:hover {
+  cursor: pointer;
+}
+.msg-container {
+  display: flex;
+  justify-content: center;
+
 }
